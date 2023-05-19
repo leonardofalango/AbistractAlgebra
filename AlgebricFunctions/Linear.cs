@@ -5,4 +5,7 @@ public class Linear : Function
 
     protected override double calculate(double x)
         => x;
+    
+    public override string ToString()
+        => $"x";
 }

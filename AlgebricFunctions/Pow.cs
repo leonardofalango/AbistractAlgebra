@@ -14,4 +14,8 @@ public class Pow : Function
 
     protected override double calculate(double x)
         => Math.Pow(inner[x], pot[x]);
+    
+    
+    public override string ToString()
+        => $"{inner} ^ {pot}";
 }

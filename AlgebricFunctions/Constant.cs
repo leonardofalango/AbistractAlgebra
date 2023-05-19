@@ -9,4 +9,7 @@ public class Constant : Function
     
     protected override double calculate(double x)
         => result;
+
+    public override string ToString()
+        => $"{result}";
 }

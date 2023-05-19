@@ -11,5 +11,6 @@ public class Cos : Function
     protected override double calculate(double x)
         => Math.Cos(inner[x]);
 
-    
+    public override string ToString()
+        => $"cos({inner})";
 }

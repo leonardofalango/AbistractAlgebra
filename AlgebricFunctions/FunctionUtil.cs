@@ -23,7 +23,7 @@ public class FunctionUtil
         }
     }
 
-    public static Function sin(Function f)
+    public static Sin sin(Function f)
     {
         Sin s = new Sin(f);
         return s;
@@ -34,4 +34,19 @@ public class FunctionUtil
         Cos cos = new Cos(f);
         return cos;
     }
+
+    public static Constant pi()
+        => new Constant(Math.PI);
+    
+}
+
+public static class NumberToConstant
+{
+    // ToConstant Functions
+    public static Constant ToConstant(this double num)
+        => new Constant(num);
+    public static Constant ToConstant(this int num)
+        => new Constant(num);
+    public static Constant ToConstant(this float num)
+        => new Constant(num);
 }

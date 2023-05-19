@@ -25,4 +25,24 @@ public class Mult : Function
         return result;
     }
 
+    
+    public override string ToString()
+    {
+        string str = string.Empty;
+
+        foreach (var item in funcs)
+        {
+            str += item.ToString();
+            str += " * ";
+        }
+        str = str.Substring(0, str.Length - 3);
+
+        return str;
+    }
+    
+    public static Mult operator *(Mult m, Function f)
+        => m.Add(f);
+    public static Mult operator *(Function f, Mult m)
+        => m.Add(f);
+
 }

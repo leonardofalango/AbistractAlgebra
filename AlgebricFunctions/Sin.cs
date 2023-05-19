@@ -11,5 +11,6 @@ public class Sin : Function
     protected override double calculate(double x)
         => Math.Sin(inner[x]);
 
-
+    public override string ToString()
+        => $"sin({inner})";
 }

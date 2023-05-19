@@ -18,4 +18,25 @@ public class Sum : Function
 
     protected override double calculate(double x)
         => funcs.Sum(e => e[x]);
+    
+    
+    public override string ToString()
+    {
+        string str = string.Empty;
+
+        foreach (var item in funcs)
+        {
+            str += item.ToString();
+            str += " + ";
+        }
+        str = str.Substring(0, str.Length - 3);
+
+        return str;
+    }
+
+    public static Sum operator +(Sum s, Function f)
+        => s.Add(f);
+    public static Sum operator +(Function f, Sum s)
+        => s.Add(f);
+    
 }

@@ -15,8 +15,7 @@ public class Log : Function
     protected override double calculate(double x)
         => Math.Log(inner[x], logBase[x]);
 
+
     public override string ToString()
-    {
-        return "log(x)"
-    }
+        => $"log(x)";
 }

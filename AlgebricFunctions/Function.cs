@@ -35,4 +35,8 @@ public abstract class Function
         s.Add(f).Add(g);
         return s;
     }
+
+    public static Function operator ^(Function f, Function g)
+        => new Pow(f, g);
+
 }
