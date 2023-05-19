@@ -53,4 +53,7 @@ public abstract class Function
         return d;
     }
 
+    public static Function operator -(Function f)
+        => new Opposite(f);
+
 }

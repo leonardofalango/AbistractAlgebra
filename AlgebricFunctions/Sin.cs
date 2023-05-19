@@ -5,7 +5,10 @@ public class Sin : Function
         => this.inner = inner;
     public override Function Derive()
     {
-        throw new NotImplementedException();
+        Cos c = new Cos(inner);
+        Mult m = new Mult();
+        m.Add(c).Add(inner);
+        return m;
     }
 
     protected override double calculate(double x)
