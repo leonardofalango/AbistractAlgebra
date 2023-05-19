@@ -40,4 +40,8 @@ System.Console.WriteLine();
 // System.Console.WriteLine(fundamental);
 // System.Console.WriteLine(fundamental[1]);
 
+var test = 10.ToConstant() * 2.ToConstant() / x ^ sin(x);
+System.Console.WriteLine(test);
+System.Console.WriteLine(test[2]);
+
 

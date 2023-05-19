@@ -1,5 +1,22 @@
 public class FunctionUtil
 {
+    public static Sin sin(Function f)
+        => new Sin(f);
+
+    public static Cos cos(Function f)
+        => new Cos(f);
+
+    public static Tan tg(Function f)
+        => new Tan(f);
+
+    public static Log logE(Function f)
+        => new Log(f, e);
+
+    public static Log log(Function f)
+        => new Log(f, 10.ToConstant());
+
+
+    // -------------------------------------------------------------------------------
     private static Linear? linear = null;
     public static Function x 
     {
@@ -22,21 +39,16 @@ public class FunctionUtil
             return euler;
         }
     }
-
-    public static Sin sin(Function f)
+    private static Constant? math_pi;
+    public static Constant pi
     {
-        Sin s = new Sin(f);
-        return s;
+        get
+        {
+            if (math_pi == null)
+                math_pi = new Constant(Math.PI);
+            return math_pi;
+        }
     }
-
-    public static Cos cos(Function f)
-    {
-        Cos cos = new Cos(f);
-        return cos;
-    }
-
-    public static Constant pi()
-        => new Constant(Math.PI);
     
 }
 

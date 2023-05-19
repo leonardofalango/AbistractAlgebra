@@ -39,4 +39,18 @@ public abstract class Function
     public static Function operator ^(Function f, Function g)
         => new Pow(f, g);
 
+    public static Function operator /(Function f, Function g)
+    {
+        Div d = new Div();
+        d.Add(f).Add(g);
+        return d;
+    }
+
+    public static Function operator -(Function f, Function g)
+    {
+        Sub d = new Sub();
+        d.Add(f).Add(g);
+        return d;
+    }
+
 }

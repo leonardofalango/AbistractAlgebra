@@ -1,7 +1,7 @@
-public class Mult : Function
+public class Div : Function
 {
     private List<Function> funcs = new List<Function>();
-    public Mult Add(Function func)
+    public Div Add(Function func)
     {
         funcs.Add(func);
         return this;
@@ -14,9 +14,9 @@ public class Mult : Function
 
     protected override double calculate(double x)
     {
-        double result = 1;
-        foreach (var item in funcs)
-            result *= item[x];
+        double result = funcs[0][x];
+        for (int i = 1; i < funcs.Count; i++)
+            result /= funcs[i][x];
         
         return result;
     }
@@ -29,16 +29,16 @@ public class Mult : Function
         foreach (var item in funcs)
         {
             str += item.ToString();
-            str += " * ";
+            str += " / ";
         }
         str = str.Substring(0, str.Length - 3);
 
         return str;
     }
     
-    public static Mult operator *(Mult m, Function f)
-        => m.Add(f);
-    public static Mult operator *(Function f, Mult m)
-        => m.Add(f);
+    public static Div operator /(Div d, Function f)
+        => d.Add(f);
+    public static Div operator /(Function f, Div d)
+        => d.Add(f);
 
 }
