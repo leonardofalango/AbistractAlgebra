@@ -5,6 +5,8 @@ public class Opposite : Function
     {
         this.func = func;
     }
+
+    // TODO - Derive Function
     public override Function Derive()
     {
         throw new NotImplementedException();

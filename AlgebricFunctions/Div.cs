@@ -7,6 +7,7 @@ public class Div : Function
         return this;
     }
 
+    // TODO - Derive Function
     public override Function Derive()
     {
         throw new NotImplementedException();

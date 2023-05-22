@@ -7,6 +7,8 @@ public class Pow : Function
         this.inner = inner;
         this.pot = pot;
     }
+
+    // TODO - Derive Function
     public override Function Derive()
     {
         throw new NotImplementedException();

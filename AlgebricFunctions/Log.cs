@@ -7,6 +7,8 @@ public class Log : Function
         this.inner = inner;
         this.logBase = logBase;
     }
+
+    // TODO - Derive Function
     public override Function Derive()
     {
         throw new NotImplementedException();

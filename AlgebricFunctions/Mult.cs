@@ -9,7 +9,22 @@ public class Mult : Function
 
     public override Function Derive()
     {
-        throw new NotImplementedException();
+        Sum sum = new Sum();
+        
+        for (int i = 0; i < funcs.Count; i++)
+        {
+            Mult mult = new Mult();
+            for (int j = 0; i < funcs.Count; j++)
+            {
+                if (i == j)
+                    mult.Add(funcs[i].Derive());
+                else
+                    mult.Add(funcs[i]);
+            }
+            sum.Add(mult);
+        }
+        
+        return sum;
     }
 
     protected override double calculate(double x)

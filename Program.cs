@@ -3,7 +3,7 @@
 // You can use it like a variable
 
 Function f = x; // static FunctionUtil for this
-// Normally FunctionUtil.x;
+// ! Normally FunctionUtil.x;
 
 // Same with sin and cos
 Function s = sin(x);
