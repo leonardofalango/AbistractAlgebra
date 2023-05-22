@@ -10,7 +10,7 @@ public class Mult : Function
     public override Function Derive()
     {
         Sum sum = new Sum();
-        
+
         for (int i = 0; i < funcs.Count; i++)
         {
             Mult mult = new Mult();
@@ -23,7 +23,7 @@ public class Mult : Function
             }
             sum.Add(mult);
         }
-        
+
         return sum;
     }
 
@@ -32,11 +32,11 @@ public class Mult : Function
         double result = 1;
         foreach (var item in funcs)
             result *= item[x];
-        
+
         return result;
     }
 
-    
+
     public override string ToString()
     {
         string str = string.Empty;
@@ -50,7 +50,7 @@ public class Mult : Function
 
         return str;
     }
-    
+
     public static Mult operator *(Mult m, Function f)
         => m.Add(f);
     public static Mult operator *(Function f, Mult m)

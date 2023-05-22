@@ -6,7 +6,7 @@ public class Constant : Function
     private double result;
     public Constant(double value)
         => this.result = value;
-    
+
     protected override double calculate(double x)
         => result;
 

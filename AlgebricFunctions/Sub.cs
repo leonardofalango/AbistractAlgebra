@@ -12,7 +12,7 @@ public class Sub : Function
         Sub result = new Sub();
         foreach (Function f in funcs)
             result.Add(f.Derive());
-        
+
         return result;
     }
 
@@ -25,8 +25,8 @@ public class Sub : Function
         }
         return result;
     }
-    
-    
+
+
     public override string ToString()
     {
         string str = string.Empty;
@@ -45,5 +45,5 @@ public class Sub : Function
         => s.Add(f);
     public static Sub operator +(Function f, Sub s)
         => s.Add(f);
-    
+
 }

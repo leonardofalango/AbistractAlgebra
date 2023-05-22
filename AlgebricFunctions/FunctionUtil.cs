@@ -18,13 +18,13 @@ public class FunctionUtil
 
     // -------------------------------------------------------------------------------
     private static Linear? linear = null;
-    public static Function x 
+    public static Function x
     {
         get
         {
             if (linear == null)
                 linear = new Linear();
-            
+
             return linear;
         }
     }
@@ -49,7 +49,7 @@ public class FunctionUtil
             return math_pi;
         }
     }
-    
+
 }
 
 public static class NumberToConstant

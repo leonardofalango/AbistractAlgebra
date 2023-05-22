@@ -12,14 +12,14 @@ public class Sum : Function
         Sum result = new Sum();
         foreach (Function f in funcs)
             result.Add(f.Derive());
-        
+
         return result;
     }
 
     protected override double calculate(double x)
         => funcs.Sum(e => e[x]);
-    
-    
+
+
     public override string ToString()
     {
         string str = string.Empty;
@@ -38,5 +38,5 @@ public class Sum : Function
         => s.Add(f);
     public static Sum operator +(Function f, Sum s)
         => s.Add(f);
-    
+
 }

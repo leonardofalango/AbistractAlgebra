@@ -18,11 +18,11 @@ public class Div : Function
         double result = funcs[0][x];
         for (int i = 1; i < funcs.Count; i++)
             result /= funcs[i][x];
-        
+
         return result;
     }
 
-    
+
     public override string ToString()
     {
         string str = string.Empty;
@@ -36,7 +36,7 @@ public class Div : Function
 
         return str;
     }
-    
+
     public static Div operator /(Div d, Function f)
         => d.Add(f);
     public static Div operator /(Function f, Div d)
