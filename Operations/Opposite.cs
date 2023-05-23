@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class Opposite : Function
 {
     private Function func;

@@ -1,7 +1,9 @@
-public class Sin : Function
+namespace Gebrasharp;
+
+
+public class Sin : TrigFunction
 {
-    private Function inner;
-    public Sin(Function inner)
+    public Sin(Function inner) : base(inner)
         => this.inner = inner;
     public override Function Derive()
     {

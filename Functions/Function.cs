@@ -1,4 +1,7 @@
 // Componente base da estrutura, representa uma função qualquer
+namespace Gebrasharp;
+
+
 public abstract class Function
 {
     // Permite usar y = f[10]

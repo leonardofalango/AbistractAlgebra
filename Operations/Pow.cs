@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class Pow : Function
 {
     Function inner;

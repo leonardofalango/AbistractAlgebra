@@ -1,7 +1,10 @@
-public class Sub : Function
+namespace Gebrasharp;
+
+
+public class Sum : Function
 {
     private List<Function> funcs = new List<Function>();
-    public Sub Add(Function func)
+    public Sum Add(Function func)
     {
         funcs.Add(func);
         return this;
@@ -9,7 +12,7 @@ public class Sub : Function
 
     public override Function Derive()
     {
-        Sub result = new Sub();
+        Sum result = new Sum();
         foreach (Function f in funcs)
             result.Add(f.Derive());
 
@@ -17,14 +20,7 @@ public class Sub : Function
     }
 
     protected override double calculate(double x)
-    {
-        double result = funcs[0][x];
-        for (int i = 1; i < funcs.Count; i++)
-        {
-            result -= funcs[i][x];
-        }
-        return result;
-    }
+        => funcs.Sum(e => e[x]);
 
 
     public override string ToString()
@@ -34,16 +30,16 @@ public class Sub : Function
         foreach (var item in funcs)
         {
             str += item.ToString();
-            str += " - ";
+            str += " + ";
         }
         str = str.Substring(0, str.Length - 3);
 
         return str;
     }
 
-    public static Sub operator +(Sub s, Function f)
+    public static Sum operator +(Sum s, Function f)
         => s.Add(f);
-    public static Sub operator +(Function f, Sub s)
+    public static Sum operator +(Function f, Sum s)
         => s.Add(f);
 
 }

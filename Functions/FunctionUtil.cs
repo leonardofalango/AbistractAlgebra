@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class FunctionUtil
 {
     public static Sin sin(Function f)
@@ -52,7 +55,7 @@ public class FunctionUtil
 
 }
 
-public static class NumberToConstant
+public static class NumberTo
 {
     // ToConstant Functions
     public static Constant ToConstant(this double num)
@@ -61,4 +64,21 @@ public static class NumberToConstant
         => new Constant(num);
     public static Constant ToConstant(this float num)
         => new Constant(num);
+    
+    // ToRadian Functions
+    public static double ToRadian(this double num)
+        => num * (180 / Math.PI);
+    public static double ToRadian(this int num)
+        => num * (180 / Math.PI);
+    public static double ToRadian(this float num)
+        => num * (180 / Math.PI);
+    
+    // ToRadianConstant
+    public static Constant ToRadianConstant(this double num)
+        => new Constant(num * (180 / Math.PI));
+    public static Constant ToRadianConstant(this int num)
+        => new Constant(num * (180 / Math.PI));
+    public static Constant ToRadianConstant(this float num)
+        => new Constant(num * (180 / Math.PI));
+
 }

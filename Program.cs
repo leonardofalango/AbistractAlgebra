@@ -1,4 +1,7 @@
-﻿using static FunctionUtil;
+﻿using Gebrasharp;
+using static Gebrasharp.FunctionUtil;
+
+
 // Linear Function is x
 // You can use it like a variable
 
@@ -29,16 +32,18 @@ System.Console.WriteLine(sum[5]);
 System.Console.WriteLine(mult[5]);
 System.Console.WriteLine();
 
+// ! All trigonometric functions arguments in Radians.
 var fundamental = (sin(x) * sin(x)) + (cos(x) * cos(x));
 System.Console.Write(fundamental);
 System.Console.Write(" = ");
 System.Console.WriteLine(fundamental[2]);
 System.Console.WriteLine();
-
-// Testing pow
-// fundamental = (sin(x) ^ new Constant(2)) + (cos(x) ^ new Constant(2));
-// System.Console.WriteLine(fundamental);
-// System.Console.WriteLine(fundamental[1]);
+// * Method to convert .ToRadian
+// var one = cos(
+//     90.ToRadian()
+//     .ToConstant());
+// * Method to convert .ToRadianConstant
+var one = cos(90.ToRadianConstant());
 
 var test = 10.ToConstant() * 2.ToConstant() / x ^ sin(x);
 System.Console.WriteLine(test);

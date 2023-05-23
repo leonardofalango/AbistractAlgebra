@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class Log : Function
 {
     private Function inner;

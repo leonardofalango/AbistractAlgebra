@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class Div : Function
 {
     private List<Function> funcs = new List<Function>();

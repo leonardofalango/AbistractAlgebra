@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class Linear : Function
 {
     public override Function Derive()

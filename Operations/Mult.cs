@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class Mult : Function
 {
     private List<Function> funcs = new List<Function>();

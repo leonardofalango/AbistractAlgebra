@@ -1,7 +1,9 @@
-public class Cos : Function
+namespace Gebrasharp;
+
+
+public class Cos : TrigFunction
 {
-    private Function inner;
-    public Cos(Function inner)
+    public Cos(Function inner) : base(inner)
         => this.inner = inner;
     public override Function Derive()
     {

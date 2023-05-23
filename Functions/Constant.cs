@@ -1,3 +1,6 @@
+namespace Gebrasharp;
+
+
 public class Constant : Function
 {
     public override Function Derive()
